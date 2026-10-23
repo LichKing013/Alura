@@ -1,11 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lactosite</title>
+    <meta name="theme-color" content="#f4f6fb">
+    <title>Entrar | Lactosite</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            place-items: center;
+            background: #f4f6fb;
+            color: #20253a;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .login-card {
+            width: min(100%, 420px);
+            padding: 40px;
+            border: 1px solid #e5e8f0;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 16px 48px rgb(32 37 58 / 8%);
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: 1.8rem;
+        }
+
+        .intro {
+            margin: 0 0 28px;
+            color: #687086;
+            line-height: 1.5;
+        }
+
+        .field {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            min-height: 48px;
+            padding: 12px 14px;
+            border: 1px solid #cbd1df;
+            border-radius: 8px;
+            color: inherit;
+            font: inherit;
+        }
+
+        input:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #9caeff;
+            outline-offset: 2px;
+        }
+
+        .options {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin: 4px 0 24px;
+            font-size: 0.9rem;
+        }
+
+        .remember {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        a {
+            color: #4058c7;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            width: 100%;
+            min-height: 48px;
+            border: 0;
+            border-radius: 8px;
+            background: #4058c7;
+            color: #fff;
+            cursor: pointer;
+            font: inherit;
+            font-weight: 700;
+        }
+
+        button:hover {
+            background: #3349ad;
+        }
+
+        .signup {
+            margin: 24px 0 0;
+            color: #687086;
+            text-align: center;
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 480px) {
+            .login-card {
+                padding: 30px 24px;
+            }
+
+            .options {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Qualquer coisa.</h1>
+    <main class="login-card">
+        <h1>Bem-vindo de volta</h1>
+        <p class="intro">Entre na sua conta do Lactosite.</p>
+
+        <form action="#" method="post">
+            <div class="field">
+                <label for="email">E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    placeholder="voce@exemplo.com"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="password">Senha</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    autocomplete="current-password"
+                    placeholder="Digite sua senha"
+                    required
+                >
+            </div>
+
+            <div class="options">
+                <label class="remember" for="remember">
+                    <input type="checkbox" id="remember" name="remember">
+                    Lembrar de mim
+                </label>
+                <a href="#">Esqueceu a senha?</a>
+            </div>
+
+            <button type="submit">Entrar</button>
+        </form>
+
+        <p class="signup">Ainda não tem uma conta? <a href="#">Cadastre-se</a></p>
+    </main>
 </body>
 </html>
