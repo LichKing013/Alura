@@ -133,7 +133,7 @@
         <h1>Bem-vindo de volta</h1>
         <p class="intro">Entre na sua conta do Lactosite.</p>
 
-        <form action="#" method="post">
+        <form id="login-form">
             <div class="field">
                 <label for="email">E-mail</label>
                 <input
@@ -171,5 +171,11 @@
 
         <p class="signup">Ainda não tem uma conta? <a href="#">Cadastre-se</a></p>
     </main>
+    <script>
+        document.getElementById("login-form").addEventListener("submit", (event) => {
+            event.preventDefault();
+            window.location.assign("index.html");
+        });
+    </script>
 </body>
 </html>
